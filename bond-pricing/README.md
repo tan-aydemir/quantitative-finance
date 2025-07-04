@@ -1,6 +1,3 @@
-Got it. Here's a professional, clean, and natural-sounding `README.md` tailored to your codebase:
-
----
 
 # Bond Pricing & Auction Simulation Toolkit
 
@@ -79,5 +76,3 @@ bid_id,bid_amount,bid_price
 * No external libraries are required.
 
 ---
-
-Let me know if you'd like this turned into a downloadable file or rendered on your GitHub repo.
