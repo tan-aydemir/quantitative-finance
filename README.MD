@@ -2,8 +2,6 @@
 
 This project processes historical stock price data and calculates various descriptive statistics based on periodic returns. It reads adjusted closing prices from CSV files, computes returns, and evaluates metrics such as mean, standard deviation, covariance, correlation, R-squared, beta, and alpha.
 
-The script uses a supporting module (`a3task1.py`) that contains custom implementations of statistical functions.
-
 ## Features
 
 - Reads adjusted close prices from CSV files
