@@ -7,45 +7,33 @@
 
 ## Overview
 
-This repository provides an object-oriented implementation of the Black-Scholes-Merton (BSM) model for pricing European call and put options. It includes tools for computing option values, deltas, and implied volatilities. The framework supports detailed parameter configuration and can generate sensitivity tables based on the underlying asset price.
+This repository provides a modular implementation of the Black-Scholes-Merton (BSM) model for pricing European options. It supports pricing of vanilla call and put options, computing option deltas, generating sensitivity tables, and estimating implied volatility via numerical methods.
 
 ---
 
-## File Descriptions
+## Contents
 
 ### `bsm_option.py`
 
-Implements the core classes for pricing European options using the Black-Scholes-Merton model.
+Defines the core BSM model classes.
 
-**Base class: `BSMOption`**
+* `BSMOption`: Base class that encapsulates shared attributes and methods (e.g., `d1`, `d2`, and their cumulative probabilities).
+* `BSMEuroCallOption`: Prices European call options.
+* `BSMEuroPutOption`: Prices European put options.
 
-* Encapsulates option parameters such as stock price (`s`), strike price (`x`), time to maturity (`t`), volatility (`sigma`), risk-free rate (`rf`), and dividend yield (`div`)
-* Computes intermediary variables `d1`, `d2`, and their cumulative normal values
-* Provides the structure for `.value()` and `.delta()` methods, which are defined in subclasses
+Each subclass includes:
 
-**Subclasses:**
-
-* `BSMEuroCallOption`: Prices a European call option
-* `BSMEuroPutOption`: Prices a European put option
-
-Each subclass implements:
-
-* `.value()` – Computes the option price
-* `.delta()` – Computes the option delta (rate of change with respect to underlying)
+* `.value()`: Computes the theoretical option price.
+* `.delta()`: Computes the option’s sensitivity to changes in the underlying asset.
 
 ---
 
 ### `bsm_analysis.py`
 
-Provides utility functions for analyzing option sensitivity and calculating implied volatility.
+Provides utilities for option analysis and diagnostics.
 
-**Functions:**
-
-* `generate_option_value_table(s, x, t, sigma, rf, div)`
-  Generates a table showing how call and put prices (and their deltas) change with the underlying asset price.
-
-* `calculate_implied_volatility(option, market_value)`
-  Estimates the implied volatility using a bisection search to match a given market price.
+* `generate_option_value_table(...)`: Creates a table of option prices and deltas as the underlying price changes.
+* `calculate_implied_volatility(...)`: Estimates implied volatility using bisection search to match a given market price.
 
 ---
 
@@ -55,37 +43,16 @@ Provides utility functions for analyzing option sensitivity and calculating impl
 from bsm_option import BSMEuroCallOption
 from bsm_analysis import calculate_implied_volatility
 
-# Instantiate a European call option
-call = BSMEuroCallOption(
-    s=100,     # current stock price
-    x=100,     # strike price
-    t=0.5,     # time to maturity in years
-    sigma=0.25,
-    rf=0.04,
-    div=0.02
-)
+# Create a call option
+call = BSMEuroCallOption(s=100, x=95, t=0.5, sigma=0.2, rf=0.05, div=0.01)
 
-# Compute option value and delta
-print("Call Option Value:", call.value())
-print("Call Delta:", call.delta())
+# Price and delta
+print(call.value())
+print(call.delta())
 
-# Compute implied volatility from observed market price
-implied_vol = calculate_implied_volatility(call, value=10.5)
-print("Implied Volatility:", implied_vol)
-```
-
----
-
-## Output Sample
-
-```
-Change in option values w.r.t. change in stock price:
-      price      call value  put value   call delta  put delta
-$      80.00        0.1814      14.6135      0.0071      0.9049
-$      81.00        0.2882      14.1972      0.0098      0.8948
-...
-$     100.00        5.2162       4.2571      0.4605     -0.4822
-...
+# Implied volatility given market price
+iv = calculate_implied_volatility(call, value=8.5)
+print("Implied Volatility:", iv)
 ```
 
 ---
@@ -93,11 +60,13 @@ $     100.00        5.2162       4.2571      0.4605     -0.4822
 ## Dependencies
 
 * `math`
-* `scipy` (for normal distribution functions)
+* `scipy.stats.norm`
 
-Install required packages with:
+Install with:
 
 ```bash
 pip install scipy
 ```
+
 ---
+
