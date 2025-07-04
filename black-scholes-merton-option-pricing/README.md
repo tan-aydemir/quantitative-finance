@@ -3,7 +3,7 @@
 # Black-Scholes-Merton Option Pricing Framework
 
 **Author:** Tan Aydemir
-**Email:** [taydemir@bu.edu](mailto:taydemir@bu.edu)
+**Email:** taydemir@bu.edu
 
 ## Overview
 
