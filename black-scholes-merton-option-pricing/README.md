@@ -1,4 +1,3 @@
----
 
 # Black-Scholes-Merton Option Pricing Framework
 
