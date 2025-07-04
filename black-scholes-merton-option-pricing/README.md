@@ -17,14 +17,14 @@ This repository provides a modular implementation of the Black-Scholes-Merton (B
 
 Defines the core BSM model classes.
 
-* `BSMOption`: Base class that encapsulates shared attributes and methods (e.g., `d1`, `d2`, and their cumulative probabilities).
-* `BSMEuroCallOption`: Prices European call options.
-* `BSMEuroPutOption`: Prices European put options.
+`BSMOption`: Base class that encapsulates shared attributes and methods (e.g., `d1`, `d2`, and their cumulative probabilities).
+`BSMEuroCallOption`: Prices European call options.
+`BSMEuroPutOption`: Prices European put options.
 
 Each subclass includes:
 
-* `.value()`: Computes the theoretical option price.
-* `.delta()`: Computes the option’s sensitivity to changes in the underlying asset.
+`.value()`: Computes the theoretical option price.
+`.delta()`: Computes the option’s sensitivity to changes in the underlying asset.
 
 ---
 
@@ -32,8 +32,8 @@ Each subclass includes:
 
 Provides utilities for option analysis and diagnostics.
 
-* `generate_option_value_table(...)`: Creates a table of option prices and deltas as the underlying price changes.
-* `calculate_implied_volatility(...)`: Estimates implied volatility using bisection search to match a given market price.
+`generate_option_value_table(...)`: Creates a table of option prices and deltas as the underlying price changes.
+`calculate_implied_volatility(...)`: Estimates implied volatility using bisection search to match a given market price.
 
 ---
 
@@ -59,8 +59,8 @@ print("Implied Volatility:", iv)
 
 ## Dependencies
 
-* `math`
-* `scipy.stats.norm`
+`math`
+`scipy.stats.norm`
 
 Install with:
 
