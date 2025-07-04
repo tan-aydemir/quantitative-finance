@@ -3,99 +3,38 @@
 **Author:** Tan Aydemir  
 **Email:** taydemir@bu.edu
 
-This repository is a curated collection of quantitative finance projects focused on modeling risk, pricing derivatives, evaluating trading strategies, and analyzing portfolio performance. Each project applies key concepts from financial engineering and computational finance through practical implementation in Python.
+This repository showcases a series of quantitative finance projects that explore a wide range of financial concepts through Python-based implementations. The work combines theoretical foundations with practical applications, covering topics in derivatives pricing, risk management, statistical modeling, and portfolio construction.
 
 ---
 
-## Overview
+## Project Highlights
 
-These projects explore a wide range of topics, including:
+### Option Pricing Models
+Includes models for pricing both vanilla and exotic options. These projects explore the Black-Scholes-Merton framework, binomial trees, and Monte Carlo simulation to evaluate European and path-dependent options, as well as compute sensitivities like delta and implied volatility.
 
-- Derivative Pricing: Black-Scholes and Binomial Trees for European and Exotic Options  
-- Risk Quantification: Monte Carlo simulation, Value at Risk (VaR), and Drawdown  
-- Investment Strategies: Passive strategies like dollar-cost averaging and rebalancing  
-- Signal-Driven Trading: Rule-based trading using interest rate shifts and technical indicators  
-- Portfolio Theory: Efficient frontier construction, mean-variance optimization, and backtesting
+### Bond Valuation
+Implements bond pricing models by discounting future cash flows and analyzing yield over different compounding periods. These models support understanding of interest rate effects and fixed-income instruments.
 
-The goal is to bridge theory with practical modeling — offering functional tools for real-world financial analysis.
+### Risk Quantification
+Applies Monte Carlo methods and historical data to simulate asset returns and quantify financial risk. Includes techniques such as Value at Risk (VaR), maximum drawdown analysis, and visualizations of simulated price paths.
 
----
+### Statistical Analysis
+Uses descriptive statistics and exploratory data analysis to examine return distributions, calculate core performance metrics, and build foundational insights from financial datasets.
 
-## Project Breakdown
+### Trading Strategy Backtesting
+Develops and tests rule-based trading strategies driven by macroeconomic indicators such as interest rate changes. Performance is compared against market benchmarks using return and risk metrics.
 
-### 1. Black-Scholes Option Pricing  
-Implements the Black-Scholes-Merton framework for pricing European call and put options.  
-Includes delta calculations, implied volatility estimation, and sensitivity analysis.
+### Passive Investment Techniques
+Models disciplined investing methods like dollar-cost averaging and periodic rebalancing. These projects simulate portfolio growth under varying market conditions and investment schedules.
 
-Files: `bsm_option.py`, `bsm_analysis.py`
-
----
-
-### 2. Binomial Tree for Exotic Options  
-Prices European-style exotic derivatives like Asian and Lookback options.  
-Simulates asset price paths using geometric Brownian motion.
-
-Files: `european_mc_stock.py`, `european_mc_exotic_options.py`
+### Portfolio Optimization
+Constructs and evaluates multi-asset portfolios using both equal weighting and mean-variance optimization. Tracks performance with cumulative returns, Value at Risk, and drawdown, both with and without rebalancing strategies.
 
 ---
 
-### 3. Risk Quantification Tools  
-Simulates stock price paths and computes historical/model-based Value at Risk (VaR).  
-Includes Monte Carlo simulations to estimate drawdown distributions.
+## Getting Started
 
-Files: `mc_stock_simulator.py`, `value_at_risk.py`, `drawdown_analysis.py`
-
----
-
-### 4. Signal-Based Strategy Using Interest Rates  
-Implements a trading strategy based on changes in long-term interest rates.  
-Measures and visualizes market, strategy, and abnormal returns.
-
-File: `interest_rate_strategy.py`
-
----
-
-### 5. Technical Strategy Backtesting  
-Backtests a Bollinger Band–based long/short strategy on historical price data.  
-Compares market and strategy performance with cumulative return plots.
-
-File: `bollinger_backtest.py`
-
----
-
-### 6. Portfolio Strategy and Risk Framework  
-Simulates passive investment strategies like dollar-cost averaging and rebalancing.  
-Builds and tracks multi-asset portfolios with custom weight allocations.
-
-File: `portfolio_strategy_builder.py`
-
----
-
-### 7. Portfolio Comparison and Risk Evaluation  
-Constructs and evaluates four portfolio strategies:  
-- Equal weights with and without rebalancing  
-- Mean-variance optimized with and without rebalancing  
-
-Assesses performance using 10-day VaR and maximum drawdown.
-
-File: `portfolio_risk_analysis.py`
-
----
-
-## Output & Visuals
-
-Some projects include accompanying visuals that summarize results. These are stored in:
-
-- `a11graphs.pdf`
-- `a12graphs.pdf`
-
-They visualize cumulative returns, strategy comparisons, and drawdowns.
-
----
-
-## Requirements
-
-Ensure the following packages are installed:
+Each project is self-contained and implemented in Python using widely adopted libraries:
 
 ```bash
 pip install numpy pandas matplotlib scipy
