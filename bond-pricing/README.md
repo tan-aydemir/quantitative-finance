@@ -54,7 +54,7 @@ Example usage:
 python3 a2task3.py
 ```
 
-This will load bids from `bond_bids.csv`, run the auction, and display the outcome.
+This will load bids from `bond_bids.csv`, run the auction, and display the outcome
 
 ---
 
