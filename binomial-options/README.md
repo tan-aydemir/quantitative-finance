@@ -1,4 +1,4 @@
-# 📊 Binomial Asset Pricing & Options Modeling
+# Binomial Asset Pricing & Options Modeling
 
 **Author:** Tan Aydemir
 **Email:** taydemir@bu.edu
