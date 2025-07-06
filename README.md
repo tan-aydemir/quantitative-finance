@@ -1,40 +1,50 @@
 # Quantitative Finance Projects
 
-**Author:** Tan Aydemir  
-**Email:** taydemir@bu.edu
+**Author:** Tan Aydemir
+**Email:** [taydemir@bu.edu](mailto:taydemir@bu.edu)
 
-This repository showcases a series of quantitative finance projects that explore a wide range of financial concepts through Python-based implementations. The work combines theoretical foundations with practical applications, covering topics in derivatives pricing, risk management, statistical modeling, and portfolio construction.
+Here is a collection of projects I’ve worked on to explore key topics in quantitative finance. I’ve used Python to build models that bridge theory and practice, which ranged from derivatives pricing to portfolio optimization. These projects reflect both my academic background and personal interest in applying data-driven approaches to financial decision-making.
 
 ---
 
-## Project Highlights
+## What I’ve Built
 
 ### Option Pricing Models
-Includes models for pricing both vanilla and exotic options. These projects explore the Black-Scholes-Merton framework, binomial trees, and Monte Carlo simulation to evaluate European and path-dependent options, as well as compute sensitivities like delta and implied volatility.
+
+I implemented models for pricing both vanilla and exotic options using frameworks like Black-Scholes-Merton, binomial trees, and Monte Carlo simulations. I also computed sensitivities like delta and implied volatility to deepen my understanding of option mechanics.
 
 ### Bond Valuation
-Implements bond pricing models by discounting future cash flows and analyzing yield over different compounding periods. These models support understanding of interest rate effects and fixed-income instruments.
+
+Here, I built tools to calculate bond prices by discounting future cash flows and analyzing how yields behave under different compounding assumptions. It helped me grasp the impact of interest rates on fixed-income securities.
 
 ### Risk Quantification
-Applies Monte Carlo methods and historical data to simulate asset returns and quantify financial risk. Includes techniques such as Value at Risk (VaR), maximum drawdown analysis, and visualizations of simulated price paths.
+
+Using Monte Carlo simulations and historical return data, I modeled asset behavior and estimated risk measures like Value at Risk (VaR) and max drawdown. I visualized simulated price paths to explore different scenarios.
 
 ### Statistical Analysis
-Uses descriptive statistics and exploratory data analysis to examine return distributions, calculate core performance metrics, and build foundational insights from financial datasets.
+
+In this section, I performed exploratory data analysis to understand return distributions and calculate performance metrics. These tools helped me develop a foundation for evaluating financial datasets.
 
 ### Trading Strategy Backtesting
-Develops and tests rule-based trading strategies driven by macroeconomic indicators such as interest rate changes. Performance is compared against market benchmarks using return and risk metrics.
+
+I tested rule-based trading strategies based on macroeconomic indicators like interest rate changes. I compared their performance to benchmarks using metrics like cumulative returns and Sharpe ratios.
 
 ### Passive Investment Techniques
-Models disciplined investing methods like dollar-cost averaging and periodic rebalancing. These projects simulate portfolio growth under varying market conditions and investment schedules.
+
+I modeled strategies like dollar-cost averaging and periodic rebalancing to simulate long-term portfolio growth under different market conditions and investment cadences.
 
 ### Portfolio Optimization
-Constructs and evaluates multi-asset portfolios using both equal weighting and mean-variance optimization. Tracks performance with cumulative returns, Value at Risk, and drawdown, both with and without rebalancing strategies.
+
+Here, I constructed multi-asset portfolios using both equal weighting and mean-variance optimization. I tracked performance through cumulative returns, Value at Risk, and drawdown metrics — both with and without rebalancing.
 
 ---
 
-## Getting Started
+## How to Get Started
 
-Each project is self-contained and implemented in Python using widely adopted libraries:
+Each project is written in Python and uses standard libraries. To get started, you can install dependencies with:
 
 ```bash
 pip install numpy pandas matplotlib scipy
+```
+
+---
