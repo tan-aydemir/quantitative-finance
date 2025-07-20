@@ -3,7 +3,7 @@
 **Author:** Tan Aydemir
 **Email:** [taydemir@bu.edu](mailto:taydemir@bu.edu)
 
-Here is a collection of projects I’ve worked on to explore key topics in quantitative finance. I’ve used Python to build models that bridge theory and practice, which ranged from derivatives pricing to portfolio optimization. These projects reflect both my academic background and personal interest in applying data-driven approaches to financial decision-making.
+Here is a collection of projects I’ve worked on last semester to explore key topics in quantitative finance. I’ve used Python to build models that bridge theory and practice, which ranged from derivatives pricing to portfolio optimization. These projects reflect both my academic background and personal interest in applying data-driven approaches to financial decision-making.
 
 ---
 
